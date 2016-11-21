@@ -217,4 +217,110 @@
 });
 
 
+/*========================================
+				MAP
+========================================*/
+
+var map;
+function initMap() {
+  var myLatLng = {lat: 50.4495471, lng: 30.5248801};
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 17, // 17
+    zoomControl: true,
+    scrollwheel: false,
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    icon: 'img/marker.png',
+    title: 'Здесь был Я!'
+  });
+
+  var styles = [
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#e3e2f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#161f32"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.medical",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#f47866"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#004230"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.place_of_worship",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#aafdb5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.school",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#b7b8f0"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#222c40"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#6460fb"
+      }
+    ]
+  }
+];
+
+  map.setOptions({styles: styles});
+
+}
  
