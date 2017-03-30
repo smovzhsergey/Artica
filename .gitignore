@@ -1,5 +1,2 @@
-node_modules/
 .idea/
-npm-debug.log
-gulpfile.js
-package.json
+node_modules/

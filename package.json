@@ -1,34 +1,15 @@
 {
-  "name": "project",
+  "name": "myapp",
+  "description": "a really cool app",
   "version": "1.0.0",
-  "description": "configurator for gulp ",
-  "main": "index.js",
+  "engines": {
+    "node": "4.1.1"
+  },
   "scripts": {
     "preinstall": "npm install express",
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "node server.js"
   },
-
-  "author": "php",
-  "license": "ISC",
-  "dependencies": {
-    "autoprefixer": "^6.5.0",
-    "browser-sync": "^2.17.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-imagemin": "^3.0.3",
-    "gulp-sass": "^2.3.2",
-    "gulp-livereload": "^3.8.1",
-    "gulp-clean-css": "^2.0.13",
-    "gulp-rigger": "^0.5.8",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-watch": "^4.3.10",
-    "imagemin-pngquant": "^5.0.0",
-    "postcss": "^5.2.4",
-    "postcss-cli": "^2.6.0",
-    "rimraf": "^2.5.4"
+  "devDependencies": {
+    "express": "^4.13.4"
   }
 }
