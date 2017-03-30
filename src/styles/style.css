@@ -34,7 +34,7 @@ body{
 
 }
 
-button, button:active, 
+button, button:active,
 input, input:focus,
 textarea{
 	outline: none;
@@ -54,7 +54,7 @@ h2{
 h2,h4{
 	text-transform: uppercase;
 	text-align: center;
-	font-weight: normal;	
+	font-weight: normal;
 }
 
 ul, ol{
@@ -140,13 +140,13 @@ span.close:hover{
 	background: #546278;
 }
 
-.purshase_btn{
+button.purshase_btn{
 	cursor: pointer;
 	padding: 20px 50px;
 	transition: all 0.5s;
 }
 
-.purshase_btn:hover{	
+button.purshase_btn:hover{
 	background: #161f32;
 }
 
@@ -596,34 +596,13 @@ p.biography{
 	margin-bottom: 20px;
 }
 
-.our_skills li>.purshase_btn{
+.our_skills .purshase_btn{
 	background: #3d506f;
 	border: 1px solid #3d506f;
 	color: #fff;
 	margin-top: 15px;
 }
 
-.our_skills ol>li{
-	background: #3d506f;
-	color: #fff;
-	padding: 12px;
-	margin: 8px 0;
-}
-.html_skill{
-	width: 85%;
-}
-
-.js_skill{
-	width: 80%;
-}
-
-.design_skill{
-	width: 95%;
-}
-
-.photo_skill{
-	width: 90%;
-}
 
 /********************************
 		OUR CUSTOMERS

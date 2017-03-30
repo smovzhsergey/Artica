@@ -70,14 +70,40 @@
 			$('body, html').animate({scrollTop: 0},'slow');
 		});
 		
-		
+
+
 	$(window).scroll(function() {
-		if ($(this).scrollTop()>250) {
-			$('#arrowUp').fadeIn('slow')
+	    var wh = $(this).height();
+	    var scrTop = $(this).scrollTop();
+        var animHeight = scrTop + wh - 100;
+
+		if ( scrTop > 250 ) {
+			$('#arrowUp').fadeIn('slow');
 		} else {
-			$('#arrowUp').fadeOut('slow')
+			$('#arrowUp').fadeOut('slow');
 		}
+
+
+
+		if( animHeight >=  $('h2').offset().top ){
+
+	        $('h2').css({visibility:"visible"}).addClass('animatedH2');
+        }
+
+		if ( animHeight >=  $('#skills').offset().top ){
+            $('.htmlSkill').addClass('animateHtml');
+            $('.jsSkill').addClass('animateJs');
+            $('.designSkill').addClass('animateDesign');
+            $('.photoSkill').addClass('animatePhoto');
+        } else {
+            $('.htmlSkill').removeClass('animateHtml');
+            $('.jsSkill').removeClass('animateJs');
+            $('.designSkill').removeClass('animateDesign');
+            $('.photoSkill').removeClass('animatePhoto');
+        }
 	});
+
+	console.log($('#skills').offset().top);
 	
 /*========================================
 				PLACEHOLDER
@@ -212,8 +238,22 @@
 			$(this).children('div').empty();
 		});
 	});
-	
-			
+
+/*========================================
+				SLIDER
+ ========================================*/
+
+    $("#lightSlider").lightSlider({
+        item: 1,
+        auto: true,
+        speed: 1600,
+        pause: 4000,
+        controls: false,
+        loop: true,
+        pager: true,
+        enableDrag:false,
+    });
+
 });
 
 
